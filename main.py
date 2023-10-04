@@ -60,7 +60,7 @@ def getOptions(args=None):
                                               "\tLevel = 1: Default analysis\n"
                                               "\tLevel = 2: Decompiler Parameter ID\n"
                                               "\tLevel = 3: Aggressive Instruction search\n",
-                        dest="level", type=int, default=1)
+                        dest="level", type=int, default=2)
     parser.add_argument("-id", "--dates", help="CSV file with release dates on each firmware", dest="inputdates")
     return parser.parse_args(args)
 
