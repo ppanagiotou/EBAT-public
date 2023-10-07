@@ -315,7 +315,7 @@ class unpackFirmware():
 
             # change the dir to extract it
             os.chdir(root)
-            binout = binwalk.scan(file, "--run-as=root", signature=True, quiet=True, matryoshka=True, extract=True)
+            binout = binwalk.scan(file, signature=True, quiet=True, matryoshka=True, extract=True, **{'run-as' : 'root'})
 
             isnotError = True
             for module in binout:
